@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated YAML Result</title>
+    <style>
+        pre {
+            white-space: pre-wrap; /* Wrap text */
+            word-wrap: break-word; /* Break long lines */
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Updated YAML File</h1>
+<pre id="yamlContent">{{ updated_yaml }}</pre>
+<button onclick="copyToClipboard()">Copy to Clipboard</button>
+
+<script>
+    function copyToClipboard() {
+        const yamlContent = document.getElementById('yamlContent').innerText;
+        navigator.clipboard.writeText(yamlContent).then(() => {
+            alert('YAML content copied to clipboard!');
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    }
+</script>
+</body>
+</html>

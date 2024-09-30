@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAML Slot Rearranger</title>
+</head>
+<body>
+<h1>Upload YAML File</h1>
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="file">Choose YAML file:</label>
+    <input type="file" name="file" id="file" accept=".yaml,.yml" required>
+    <br><br>
+
+    <label for="data_key">Data Key:</label>
+    <input type="text" name="data_key" id="data_key" required>
+    <br><br>
+
+    <label for="slot_ranges">Define Slot Ranges (e.g., 10-16,19-25,28-34,37-43):</label>
+    <input type="text" name="slot_ranges" id="slot_ranges" required>
+    <br><br>
+
+    <input type="submit" value="Upload">
+</form>
+</body>
+</html>
